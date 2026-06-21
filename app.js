@@ -225,10 +225,9 @@
     setTimeout(() => el.classList.remove(cls), 1500);
   }
   function setQuality(mbps) {
-    const q = mbps > 80 ? 'চমৎকার' : mbps > 40 ? 'ভালো' : mbps > 15 ? 'মোটামুটি' : mbps > 0 ? 'দুর্বল' : 'অপেক্ষমাণ';
-    const qc = mbps > 80 ? '#22D3EE' : mbps > 40 ? '#10B981' : mbps > 15 ? '#f59e0b' : mbps > 0 ? '#ef4444' : '#94a3b8';
-    const qp = $('qualPill');
-    qp.textContent = q; qp.style.color = qc; qp.style.borderColor = qc + '44'; qp.style.background = qc + '18';
+    const qc = mbps > 80 ? '#22D3EE' : mbps > 40 ? '#10B981' : mbps > 15 ? '#f59e0b' : mbps > 0 ? '#ef4444' : 'rgba(255,255,255,0.07)';
+    const wc = $('waveCard');
+    if (wc) wc.style.borderColor = qc;
   }
   function getGrade(dl) {
     if (dl > 100) return 'A+'; if (dl > 50) return 'A'; if (dl > 25) return 'B'; if (dl > 10) return 'C'; return 'D';

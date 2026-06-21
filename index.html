@@ -75,91 +75,88 @@
         </button>
       </div>
 
-      <div class="gauge-section">
-        <div class="gauge-wrap">
-          <div class="gauge-glass"></div>
-          <canvas id="gaugeCanvas" width="240" height="148"></canvas>
-          <div class="speed-center">
-            <div class="speed-num" id="speedNum">0.0</div>
-            <div class="speed-unit" id="speedUnit">MBPS</div>
+      <div class="main-grid">
+        <div class="gauge-section">
+          <div class="gauge-wrap">
+            <div class="gauge-glass"></div>
+            <canvas id="gaugeCanvas" width="240" height="148"></canvas>
+            <div class="speed-center">
+              <div class="speed-num" id="speedNum">0.0</div>
+              <div class="speed-unit" id="speedUnit">MBPS</div>
+            </div>
           </div>
+          <div class="phase-badge" id="phaseBadge">পরীক্ষার জন্য প্রস্তুত</div>
         </div>
-        <div class="phase-badge" id="phaseBadge">পরীক্ষার জন্য প্রস্তুত</div>
-      </div>
 
-      <div class="stats-grid">
-        <div class="stat-card ping" id="sc-ping">
-          <div class="stat-icon" style="color:var(--green)">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div class="stat-val c-green" id="vPing">—</div>
-          <div class="stat-lbl">পিং</div>
-          <div class="stat-unit">ms</div>
+        <div class="center-btn-row">
+          <button class="start-btn" id="startBtn">
+            <div class="ripple"></div>
+            <div class="ripple" style="animation-delay:.8s"></div>
+            <div class="s-outer" id="sOuter"></div>
+            <div class="s-mid"></div>
+            <div class="s-inner">
+              <div class="s-icon" id="btnIcon">▶</div>
+              <div class="s-lbl" id="btnLbl">শুরু</div>
+            </div>
+          </button>
         </div>
-        <div class="stat-card dl" id="sc-dl">
-          <div class="stat-icon" style="color:var(--cyan)">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>
-          </div>
-          <div class="stat-val c-cyan" id="vDl">—</div>
-          <div class="stat-lbl">ডাউনলোড</div>
-          <div class="stat-unit" id="dlUnit">Mbps</div>
-        </div>
-        <div class="stat-card ul" id="sc-ul">
-          <div class="stat-icon" style="color:var(--purple)">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>
-          </div>
-          <div class="stat-val c-purple" id="vUl">—</div>
-          <div class="stat-lbl">আপলোড</div>
-          <div class="stat-unit" id="ulUnit">Mbps</div>
-        </div>
-      </div>
 
-      <div class="wave-card">
-        <div class="wave-hdr">
-          <span class="wave-title">লাইভ থ্রুপুট</span>
-          <span class="quality-pill" id="qualPill">অপেক্ষমাণ</span>
+        <div class="stats-grid">
+          <div class="stat-card ping" id="sc-ping">
+            <div class="stat-icon" style="color:var(--green)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="stat-val c-green" id="vPing">—</div>
+            <div class="stat-lbl">পিং</div>
+            <div class="stat-unit">ms</div>
+          </div>
+          <div class="stat-card dl" id="sc-dl">
+            <div class="stat-icon" style="color:var(--cyan)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>
+            </div>
+            <div class="stat-val c-cyan" id="vDl">—</div>
+            <div class="stat-lbl">ডাউনলোড</div>
+            <div class="stat-unit" id="dlUnit">Mbps</div>
+          </div>
+          <div class="stat-card ul" id="sc-ul">
+            <div class="stat-icon" style="color:var(--purple)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>
+            </div>
+            <div class="stat-val c-purple" id="vUl">—</div>
+            <div class="stat-lbl">আপলোড</div>
+            <div class="stat-unit" id="ulUnit">Mbps</div>
+          </div>
         </div>
-        <canvas id="waveCanvas" height="54"></canvas>
-      </div>
 
-      <div class="isp-card" id="ispCard">
-        <div class="isp-row">
-          <div class="isp-icon">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><rect x="2" y="9" width="20" height="12" rx="2"/><path d="M6 9V7a6 6 0 0 1 12 0v2"/><circle cx="12" cy="15" r="1.5"/></svg>
+        <div class="wave-card">
+          <div class="wave-hdr">
+            <span class="wave-title">লাইভ থ্রুপুট</span>
+            <span class="quality-pill" id="qualPill">অপেক্ষমাণ</span>
           </div>
-          <div class="isp-body">
-            <div class="isp-name" id="ispName">IP তথ্য সনাক্ত করা হচ্ছে…</div>
-            <div class="isp-ip" id="ispIp">—</div>
-          </div>
-          <div class="isp-side">
-            <div class="isp-badge" id="ispCountry">—</div>
-          </div>
+          <canvas id="waveCanvas" height="40"></canvas>
         </div>
-      </div>
 
-      <div class="btn-row">
-        <button class="start-btn" id="startBtn">
-          <div class="ripple"></div>
-          <div class="ripple" style="animation-delay:.8s"></div>
-          <div class="s-outer" id="sOuter"></div>
-          <div class="s-mid"></div>
-          <div class="s-inner">
-            <div class="s-icon" id="btnIcon">▶</div>
-            <div class="s-lbl" id="btnLbl">শুরু</div>
+        <div class="bottom-row">
+          <div class="isp-card" id="ispCard">
+            <div class="isp-row">
+              <div class="isp-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><rect x="2" y="9" width="20" height="12" rx="2"/><path d="M6 9V7a6 6 0 0 1 12 0v2"/><circle cx="12" cy="15" r="1.5"/></svg>
+              </div>
+              <div class="isp-body">
+                <div class="isp-name" id="ispName">IP তথ্য সনাক্ত করা হচ্ছে…</div>
+                <div class="isp-ip" id="ispIp">—</div>
+              </div>
+              <div class="isp-side">
+                <div class="isp-badge" id="ispCountry">—</div>
+              </div>
+            </div>
           </div>
-        </button>
-        <button class="share-btn" id="shareBtn" disabled>
-          <div class="share-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-          </div>
-          <div>শেয়ার</div>
-          <div class="share-sub">ফলাফল</div>
-        </button>
-      </div>
 
-      <div class="data-notice" id="dataNotice">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        এই টেস্ট আনুমানিক <strong id="dataAmount">~25 MB</strong> ডেটা ব্যবহার করবে
+          <button class="share-btn-mini" id="shareBtn" disabled title="ফলাফল শেয়ার করুন">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            <span>শেয়ার</span>
+          </button>
+        </div>
       </div>
 
     </div>

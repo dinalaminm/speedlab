@@ -155,11 +155,8 @@ body{
 .stat-unit{font-size:8px;color:rgba(255,255,255,0.18)}
 
 /* ── WAVE ── */
-.wave-card{background:rgba(255,255,255,0.025);border:1px solid var(--border);border-radius:14px;padding:8px 12px;overflow:hidden;flex-shrink:0}
-.wave-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
-.wave-title{font-size:9px;color:var(--text3);letter-spacing:0.5px;font-weight:500}
-.quality-pill{font-size:9px;font-weight:600;padding:2px 8px;border-radius:10px;background:rgba(148,163,184,0.12);color:var(--text2);border:1px solid rgba(148,163,184,0.2);transition:all 0.4s}
-#waveCanvas{display:block;width:100%;height:36px}
+.wave-card{background:rgba(255,255,255,0.025);border:1px solid var(--border);border-radius:14px;padding:7px 12px;overflow:hidden;flex-shrink:0;transition:border-color 0.4s}
+#waveCanvas{display:block;width:100%;height:32px}
 
 /* ── ISP CARD ── */
 .isp-card{background:rgba(255,255,255,0.03);border:1px solid rgba(168,85,247,0.15);border-radius:14px;padding:9px 12px;position:relative;overflow:hidden}

@@ -85,20 +85,7 @@
               <div class="speed-unit" id="speedUnit">MBPS</div>
             </div>
           </div>
-          <div class="phase-badge" id="phaseBadge">পরীক্ষার জন্য প্রস্তুত</div>
-        </div>
-
-        <div class="center-btn-row">
-          <button class="start-btn" id="startBtn">
-            <div class="ripple"></div>
-            <div class="ripple" style="animation-delay:.8s"></div>
-            <div class="s-outer" id="sOuter"></div>
-            <div class="s-mid"></div>
-            <div class="s-inner">
-              <div class="s-icon" id="btnIcon">▶</div>
-              <div class="s-lbl" id="btnLbl">শুরু</div>
-            </div>
-          </button>
+          <div class="phase-badge" id="phaseBadge">প্রস্তুত</div>
         </div>
 
         <div class="stats-grid">
@@ -128,12 +115,21 @@
           </div>
         </div>
 
-        <div class="wave-card">
-          <div class="wave-hdr">
-            <span class="wave-title">লাইভ থ্রুপুট</span>
-            <span class="quality-pill" id="qualPill">অপেক্ষমাণ</span>
-          </div>
-          <canvas id="waveCanvas" height="40"></canvas>
+        <div class="center-btn-row">
+          <button class="start-btn" id="startBtn">
+            <div class="ripple"></div>
+            <div class="ripple" style="animation-delay:.8s"></div>
+            <div class="s-outer" id="sOuter"></div>
+            <div class="s-mid"></div>
+            <div class="s-inner">
+              <div class="s-icon" id="btnIcon">▶</div>
+              <div class="s-lbl" id="btnLbl">শুরু</div>
+            </div>
+          </button>
+        </div>
+
+        <div class="wave-card" id="waveCard">
+          <canvas id="waveCanvas" height="32"></canvas>
         </div>
 
         <div class="bottom-row">
@@ -143,7 +139,7 @@
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><rect x="2" y="9" width="20" height="12" rx="2"/><path d="M6 9V7a6 6 0 0 1 12 0v2"/><circle cx="12" cy="15" r="1.5"/></svg>
               </div>
               <div class="isp-body">
-                <div class="isp-name" id="ispName">IP তথ্য সনাক্ত করা হচ্ছে…</div>
+                <div class="isp-name" id="ispName">সনাক্ত করা হচ্ছে…</div>
                 <div class="isp-ip" id="ispIp">—</div>
               </div>
               <div class="isp-side">
@@ -156,6 +152,7 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
             <span>শেয়ার</span>
           </button>
+
         </div>
       </div>
 

@@ -76,13 +76,25 @@
       </div>
 
       <div class="main-grid">
-        <div class="gauge-section">
+        <div class="gauge-section idle" id="gaugeSection">
           <div class="gauge-wrap">
             <div class="gauge-glass"></div>
             <canvas id="gaugeCanvas" width="240" height="148"></canvas>
             <div class="speed-center">
               <div class="speed-num" id="speedNum">0.0</div>
               <div class="speed-unit" id="speedUnit">MBPS</div>
+            </div>
+            <div class="gauge-play-overlay" id="gaugePlayOverlay">
+              <button class="start-btn" id="startBtn">
+                <div class="ripple"></div>
+                <div class="ripple" style="animation-delay:.8s"></div>
+                <div class="s-outer" id="sOuter"></div>
+                <div class="s-mid"></div>
+                <div class="s-inner">
+                  <div class="s-icon" id="btnIcon">▶</div>
+                  <div class="s-lbl" id="btnLbl">শুরু</div>
+                </div>
+              </button>
             </div>
           </div>
           <div class="phase-badge" id="phaseBadge">প্রস্তুত</div>
@@ -113,19 +125,6 @@
             <div class="stat-lbl">আপলোড</div>
             <div class="stat-unit" id="ulUnit">Mbps</div>
           </div>
-        </div>
-
-        <div class="center-btn-row">
-          <button class="start-btn" id="startBtn">
-            <div class="ripple"></div>
-            <div class="ripple" style="animation-delay:.8s"></div>
-            <div class="s-outer" id="sOuter"></div>
-            <div class="s-mid"></div>
-            <div class="s-inner">
-              <div class="s-icon" id="btnIcon">▶</div>
-              <div class="s-lbl" id="btnLbl">শুরু</div>
-            </div>
-          </button>
         </div>
 
         <div class="wave-card" id="waveCard">

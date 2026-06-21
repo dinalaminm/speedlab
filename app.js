@@ -247,6 +247,8 @@
     running = true;
     SpeedTest.resetAbort();
     dlResult = 0; ulResult = 0; pingVal = 0; jitterVal = 0; curDisplaySpeed = 0;
+    $('gaugeSection').classList.remove('idle', 'done');
+    $('gaugeSection').classList.add('running');
     $('sOuter').classList.add('go');
     $('btnIcon').textContent = '■';
     $('btnLbl').textContent = 'থামুন';
@@ -333,6 +335,8 @@
     $('speedUnit').textContent = unitMbps ? 'MBPS' : 'MB/S';
     setPhase('✓ পরীক্ষা সম্পন্ন', 'ok');
     drawGauge(Math.min(dlResult / 200, 1));
+    $('gaugeSection').classList.remove('idle', 'running');
+    $('gaugeSection').classList.add('done');
     resetButton('↺', 'আবার');
     $('shareBtn').disabled = false;
     haptic('পরীক্ষা সম্পন্ন', [50, 30, 80, 30, 50]);
@@ -356,6 +360,8 @@
     SpeedTest.abort();
     curDisplaySpeed = 0;
     setPhase('পরীক্ষা বন্ধ করা হয়েছে', 'warn');
+    $('gaugeSection').classList.remove('running', 'done');
+    $('gaugeSection').classList.add('idle');
     resetButton();
     drawGauge(0);
     setQuality(0);
